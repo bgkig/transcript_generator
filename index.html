@@ -1,0 +1,256 @@
+﻿<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>オフラインWhisper文字起こし | ブラウザ完結ローカル転写ツール</title>
+    <meta
+      name="description"
+      content="MP3/MP4/WAVをドラッグ＆ドロップするだけで、すべてクライアントサイドでWhisper文字起こし。初回ロード後はオフライン対応、プライバシー重視のローカル転写ツール。"
+    />
+    <meta
+      name="keywords"
+      content="Whisper, 文字起こし, オフライン, ブラウザ, ローカル, 転写, 音声認識, クライアントサイド, プライバシー"
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="theme-color" content="#0a0f1f" />
+    <meta name="application-name" content="オフラインWhisper文字起こし" />
+    <meta name="apple-mobile-web-app-title" content="オフラインWhisper文字起こし" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="canonical" href="https://bgkig.github.io/transcript_generator/" />
+    <link rel="alternate" hreflang="ja" href="https://bgkig.github.io/transcript_generator/" />
+    <link rel="alternate" hreflang="en" href="https://bgkig.github.io/transcript_generator/?lang=en" />
+    <link rel="alternate" hreflang="x-default" href="https://bgkig.github.io/transcript_generator/" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="オフラインWhisper文字起こし" />
+    <meta property="og:title" content="オフラインWhisper文字起こし | ブラウザ完結ローカル転写ツール" />
+    <meta
+      property="og:description"
+      content="MP3/MP4/WAVをドラッグ＆ドロップするだけで、すべてクライアントサイドでWhisper文字起こし。初回ロード後はオフライン対応、プライバシー重視のローカル転写ツール。"
+    />
+    <meta property="og:url" content="https://bgkig.github.io/transcript_generator/" />
+    <meta property="og:image" content="https://bgkig.github.io/transcript_generator/og-image.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="オフラインWhisper文字起こし | ブラウザ完結ローカル転写ツール" />
+    <meta
+      name="twitter:description"
+      content="MP3/MP4/WAVをドラッグ＆ドロップするだけで、すべてクライアントサイドでWhisper文字起こし。初回ロード後はオフライン対応、プライバシー重視のローカル転写ツール。"
+    />
+    <meta name="twitter:image" content="https://bgkig.github.io/transcript_generator/og-image.svg" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+              mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+            },
+            colors: {
+              ink: {
+                900: '#0a0f1f',
+                800: '#0f172a',
+                700: '#141c2f',
+                600: '#1d2743',
+              },
+              mist: {
+                100: '#e2e8f0',
+                200: '#cbd5f5',
+                300: '#aab6e8',
+              },
+              glow: {
+                300: '#7ee7ff',
+                400: '#41d6ff',
+                500: '#0bb7ff',
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "オフラインWhisper文字起こし",
+        "description": "MP3/MP4/WAVをドラッグ＆ドロップするだけで、すべてクライアントサイドでWhisper文字起こし。初回ロード後はオフライン対応、プライバシー重視のローカル転写ツール。",
+        "url": "https://bgkig.github.io/transcript_generator/",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Web",
+        "inLanguage": "ja",
+        "isAccessibleForFree": true,
+        "featureList": [
+          "ブラウザ内で完結するローカル文字起こし",
+          "初回ロード後はオフライン利用に対応",
+          "MP3 / MP4 / WAV をドラッグ＆ドロップで処理"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "JPY",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-ink-900 text-mist-100">
+    <div class="page-gradient"></div>
+    <main class="relative mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 pb-16 pt-12">
+      <header class="space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <p
+            class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.3em] text-mist-300"
+            data-i18n="tagline"
+          >
+            Offline • Client-side • Whisper
+          </p>
+          <div
+            id="language-toggle"
+            class="language-toggle"
+            role="group"
+            aria-label="Language"
+            data-i18n-aria-label="lang_toggle_label"
+          >
+            <button class="lang-btn is-active" type="button" data-lang="ja" data-i18n="lang_ja" aria-pressed="true">
+              日本語
+            </button>
+            <button class="lang-btn" type="button" data-lang="en" data-i18n="lang_en" aria-pressed="false">
+              English
+            </button>
+          </div>
+        </div>
+        <h1 class="text-balance text-4xl font-semibold text-white md:text-5xl" data-i18n="hero_title">
+          ブラウザだけで動くローカル文字起こし
+        </h1>
+        <p class="max-w-2xl text-sm text-mist-300 md:text-base" data-i18n="hero_subtitle">
+          MP3 / MP4 / WAV をドラッグ＆ドロップして、すべてクライアントサイドで Whisper 文字起こし。初回ロード後はオフラインでも利用できます。
+        </p>
+      </header>
+
+      <section class="grid gap-6 md:grid-cols-[1.1fr_0.9fr]" aria-labelledby="upload-heading">
+        <h2 id="upload-heading" class="sr-only" data-i18n="upload_heading">ファイルのアップロードと進捗</h2>
+        <div class="glass-panel space-y-6">
+          <div id="dropzone" class="dropzone">
+            <input id="file-input" class="sr-only" type="file" accept=".mp3,.mp4,.wav,audio/mpeg,audio/mp3,audio/wav,audio/x-wav,video/mp4" />
+            <div class="dropzone-inner">
+              <div class="dropzone-icon">
+                <span class="icon-wave"></span>
+              </div>
+              <div>
+                <p class="text-lg font-semibold text-white" data-i18n="dropzone_title">ここにファイルをドロップ</p>
+                <p class="text-sm text-mist-300" data-i18n="dropzone_subtitle">またはクリックして選択 (最大 250MB 目安)</p>
+                <p class="text-xs text-mist-300" data-i18n="dropzone_formats">対応形式: MP3 / MP4 / WAV</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 text-sm text-mist-300">
+            <span class="status-pill" id="model-status" data-i18n="status_model_unloaded">モデル未ロード</span>
+            <span class="status-pill" id="worker-status" data-i18n="status_worker_idle">Worker 待機中</span>
+            <span class="status-pill" id="offline-status" data-i18n="status_online">オンライン</span>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 text-xs text-mist-300">
+            <span class="uppercase tracking-[0.3em]" data-i18n="label_model">Model</span>
+            <select id="model-select" class="model-select">
+              <option value="base" selected data-i18n="option_base">Whisper base (精度優先)</option>
+              <option value="tiny" data-i18n="option_tiny">Whisper tiny (速度優先)</option>
+              <option value="small" data-i18n="option_small">Whisper small</option>
+              <option value="medium" data-i18n="option_medium">Whisper medium</option>
+              <option value="large-v3" data-i18n="option_large_v3">Whisper large-v3</option>
+            </select>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex flex-wrap items-start gap-4">
+              <div>
+                <p class="text-xs uppercase tracking-[0.3em] text-mist-300" data-i18n="label_file">FILE</p>
+                <p id="file-name" class="text-sm font-semibold text-white" data-i18n="file_unselected">未選択</p>
+                <p id="file-details" class="text-xs text-mist-300">-</p>
+              </div>
+              <div class="ml-auto flex gap-2">
+                <button id="clear-btn" class="ghost-btn" type="button" data-i18n="clear_btn">クリア</button>
+                <button id="transcribe-btn" class="primary-btn" type="button" disabled data-i18n="transcribe_btn">文字起こし開始</button>
+              </div>
+            </div>
+
+            <div id="preview-wrapper" class="preview-card">
+              <audio id="audio-preview" controls class="hidden w-full"></audio>
+              <video id="video-preview" controls class="hidden w-full" playsinline></video>
+              <p id="preview-placeholder" class="text-sm text-mist-300" data-i18n="preview_placeholder">
+                プレビューがここに表示されます。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="glass-panel space-y-4">
+            <div class="flex items-center justify-between">
+              <p class="text-sm font-semibold text-white" data-i18n="model_progress_title">モデルロード進捗</p>
+              <span class="text-xs text-mist-300" data-i18n="model_progress_note">初回のみ</span>
+            </div>
+            <div id="model-progress-list" class="space-y-3 text-xs text-mist-300">
+              <p data-i18n="model_progress_empty">まだロードされていません。</p>
+            </div>
+          </div>
+
+          <div class="glass-panel space-y-4">
+            <div class="flex items-center justify-between">
+              <p class="text-sm font-semibold text-white" data-i18n="transcribe_progress_title">文字起こし進捗</p>
+              <span id="transcribe-percent" class="text-xs text-mist-300">0%</span>
+            </div>
+            <div class="progress-track">
+              <div id="transcribe-progress" class="progress-fill" style="width: 0%"></div>
+            </div>
+            <p id="transcribe-status" class="text-xs text-mist-300" data-i18n="transcribe_status_idle">待機中</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="glass-panel space-y-4" aria-labelledby="result-heading">
+        <h2 id="result-heading" class="sr-only" data-i18n="result_heading">文字起こし結果</h2>
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <p class="text-sm font-semibold text-white" data-i18n="result_title">文字起こし結果</p>
+            <p class="text-xs text-mist-300" data-i18n="result_subtitle">テキストはローカルでのみ処理されます。</p>
+          </div>
+          <button id="download-btn" class="ghost-btn" type="button" disabled data-i18n="download_btn">.txt をダウンロード</button>
+        </div>
+        <textarea
+          id="output-text"
+          class="output-area"
+          placeholder="ここに文字起こし結果が表示されます。"
+          translate="no" data-i18n-placeholder="output_placeholder"
+          rows="10"
+        ></textarea>
+      </section>
+
+      <footer class="text-xs text-mist-300">
+        <p>
+          <span data-i18n="footer_note">
+            初回はモデルと WASM をダウンロードします。完了後は Cache API と Service Worker によりオフラインで再利用できます。
+          </span>
+        </p>
+      </footer>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
+

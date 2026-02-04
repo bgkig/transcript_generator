@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="オフラインWhisper文字起こし">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1f" />
+      <stop offset="60%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#0b1120" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7ee7ff" />
+      <stop offset="100%" stop-color="#0bb7ff" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="220" cy="120" r="140" fill="#0ea5e9" opacity="0.15" />
+  <circle cx="1040" cy="80" r="180" fill="#14b8a6" opacity="0.12" />
+  <circle cx="980" cy="520" r="220" fill="#3b82f6" opacity="0.12" />
+  <g fill="url(#glow)" opacity="0.95">
+    <rect x="120" y="380" width="48" height="150" rx="24" />
+    <rect x="200" y="330" width="48" height="200" rx="24" />
+    <rect x="280" y="360" width="48" height="170" rx="24" />
+    <rect x="360" y="410" width="48" height="120" rx="24" />
+  </g>
+  <text x="120" y="220" fill="#ffffff" font-size="56" font-weight="600" font-family="'Space Grotesk','Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif">
+    オフラインWhisper文字起こし
+  </text>
+  <text x="120" y="290" fill="#cbd5f5" font-size="28" font-weight="400" font-family="'Space Grotesk','Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif">
+    ブラウザ完結・ローカル転写・オフライン対応
+  </text>
+  <text x="120" y="345" fill="#94a3b8" font-size="22" font-family="'JetBrains Mono','Noto Sans JP',sans-serif" letter-spacing="0.08em">
+    MP3 / MP4 / WAV
+  </text>
+</svg>
