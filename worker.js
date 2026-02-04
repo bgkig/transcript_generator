@@ -1,4 +1,12 @@
-﻿
+import { env, pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.8.0';
+
+env.allowLocalModels = false;
+env.useBrowserCache = true;
+env.allowRemoteModels = true;
+env.backends.onnx.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.17.3/dist/';
+
+
+
 const TRANSCRIBE_TASK = 'transcribe';
 
 env.allowLocalModels = false;
@@ -107,5 +115,6 @@ self.addEventListener('message', async (event) => {
     }
   }
 });
+
 
 
