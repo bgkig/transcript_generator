@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://bgkig.github.io/transcript_generator/sitemap.xml
